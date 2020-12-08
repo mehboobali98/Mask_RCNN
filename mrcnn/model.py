@@ -2301,8 +2301,8 @@ class MaskRCNN():
                     imgaug.augmenters.Fliplr(0.5),
                     imgaug.augmenters.GaussianBlur(sigma=(0.0, 5.0))
                 ])
-	    custom_callbacks: Optional. Add custom callbacks to be called
-	        with the keras fit_generator method. Must be list of type keras.callbacks.
+        custom_callbacks: Optional. Add custom callbacks to be called
+            with the keras fit_generator method. Must be list of type keras.callbacks.
         no_augmentation_sources: Optional. List of sources to exclude for
             augmentation. A source is string that identifies a dataset and is
             defined in the Dataset class.
@@ -2360,7 +2360,7 @@ class MaskRCNN():
             workers = 0
         else:
             # workers = multiprocessing.cpu_count()
-			workers = 1
+            workers = 1
 
         self.keras_model.fit_generator(
             train_generator,
@@ -2373,7 +2373,7 @@ class MaskRCNN():
             max_queue_size=100,
             workers=workers,
             # use_multiprocessing=True,
-			use_multiprocessing=False,
+            use_multiprocessing=False,
         )
         self.epoch = max(self.epoch, epochs)
 
