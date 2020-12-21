@@ -1217,8 +1217,6 @@ def plot_confusion_matrix_from_data(y_test, predictions, columns=None, annot=Tru
     #confusion matrix 
     confm = confusion_matrix(y_test, predictions)
     num_classes = len(columns)
-	print(num_classes)
-    
     #compute tp fn fp 
     
     fp=[0]*num_classes
